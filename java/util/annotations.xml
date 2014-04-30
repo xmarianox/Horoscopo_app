@@ -1,0 +1,5 @@
+<root>
+    <item name='java.util.Calendar DATE'>
+        <annotation name='java.lang.annotation.Deprecated' />
+    </item>
+</root>

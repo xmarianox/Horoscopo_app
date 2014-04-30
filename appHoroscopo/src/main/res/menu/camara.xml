@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="la.funka.apphoroscopo.CamaraActivity" >
+    
+    <item android:id="@+id/camara_action"
+        android:title="@string/action_camara"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/ver_action"
+        android:title="@string/action_ver"
+        android:orderInCategory="200" />
+
+    <item android:id="@+id/ayuda_action"
+        android:title="@string/action_ayuda"
+        android:orderInCategory="300" />
+
+</menu>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="la.funka.apphoroscopo.SignoChinoActivity"
+    android:background="#FEEAC5">
+
+    <ImageView
+        android:id="@+id/img_signo"
+        android:src="@drawable/mono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/image_description_chino" />
+
+    <TextView
+        android:id="@+id/text_signo"
+        android:text="@string/text_chino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/img_signo"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#34495e" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="16dp"
+        android:layout_below="@+id/img_signo"
+        android:layout_alignRight="@+id/text_signo"
+        android:layout_alignEnd="@+id/text_signo">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""
+                android:textColor="#34495e"
+                android:textAlignment="center"
+                android:id="@+id/text_prediccion"/>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="la.funka.apphoroscopo.ChinoActivity"
+    android:background="#FEEAC5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_chino"
+            android:id="@+id/title_chino"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:textSize="30sp"
+            android:textColor="#34495e"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/input_anio_chino"
+            android:layout_gravity="center"
+            android:hint="@string/texto_ayuda_chino"
+            android:textColor="#34495e"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_btn_calcular"
+            android:id="@+id/btn_calcular_chino"
+            android:layout_gravity="center"
+            android:textColor="#34495e"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

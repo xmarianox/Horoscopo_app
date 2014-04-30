@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TuSuerteHoroscopo.iml" filepath="$PROJECT_DIR$/TuSuerteHoroscopo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appHoroscopo/appHoroscopo.iml" filepath="$PROJECT_DIR$/appHoroscopo/appHoroscopo.iml" />
+    </modules>
+  </component>
+</project>
+
