@@ -2,7 +2,9 @@ package la.funka.apphoroscopo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -14,7 +16,9 @@ import org.apache.http.protocol.HTTP;
 
 public class OraculoZodiacoActivity extends Activity {
 
+
     public SignoZodiaco signoZodiaco;
+    //private Drawable mActionBarBackgroundDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,6 @@ public class OraculoZodiacoActivity extends Activity {
         setContentView(R.layout.activity_oraculo_zodiaco);
 
         String signo = getIntent().getStringExtra("signo");
-
         signoZodiaco = new SignoZodiaco(signo);
 
         String nombreSigno = signoZodiaco.getNombreSigno().toString();
@@ -37,7 +40,7 @@ public class OraculoZodiacoActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.signo_chino, menu);
+        getMenuInflater().inflate(R.menu.signo_zodiaco, menu);
         return true;
     }
 
@@ -52,16 +55,16 @@ public class OraculoZodiacoActivity extends Activity {
         TextView text_prediccion = (TextView) findViewById(R.id.text_prediccion_zodiaco);
 
         switch (item.getItemId()) {
-            case  R.id.action_amor:
+            case  R.id.action_amor_zodiaco:
                 text_prediccion.setText(signoZodiaco.prediccionAmor(nombreSigno));
                 break;
-            case R.id.action_salud:
+            case R.id.action_salud_zodiaco:
                 text_prediccion.setText(signoZodiaco.prediccionSalud(nombreSigno));
                 break;
-            case R.id.action_dinero:
+            case R.id.action_dinero_zodiaco:
                 text_prediccion.setText(signoZodiaco.prediccionDinero(nombreSigno));
                 break;
-            case R.id.action_enviar_sms:
+            case R.id.action_enviar_sms_zodiaco:
                 Intent intent_sms = new Intent(Intent.ACTION_SEND);
                 intent_sms.setType("text/plain");
                 intent_sms.putExtra(Intent.EXTRA_PHONE_NUMBER, "3030");
@@ -72,7 +75,7 @@ public class OraculoZodiacoActivity extends Activity {
                     Toast.makeText(this, "No se pudo enviar el mensaje.", Toast.LENGTH_LONG).show();
                 }
                 break;
-            case R.id.action_enviar_email:
+            case R.id.action_enviar_email_zodiaco:
                 Intent intent_email = new Intent(Intent.ACTION_SEND);
                 intent_email.setType(HTTP.PLAIN_TEXT_TYPE);
                 intent_email.putExtra(Intent.EXTRA_EMAIL, new String[]{"molina.mariano23@gmail.com"});
@@ -84,7 +87,7 @@ public class OraculoZodiacoActivity extends Activity {
                     Toast.makeText(this, "No se pudo enviar el mensaje.", Toast.LENGTH_LONG).show();
                 }
                 break;
-            case R.id.action_compartir:
+            case R.id.action_compartir_zodiaco:
                 Intent intent_share = new Intent(Intent.ACTION_SEND);
                 intent_share.setType("text/plain");
                 intent_share.putExtra(Intent.EXTRA_TEXT, text_prediccion.getText().toString());
@@ -93,6 +96,15 @@ public class OraculoZodiacoActivity extends Activity {
                 } catch (Exception e) {
                     Toast.makeText(this, "No se pudo compartir.", Toast.LENGTH_LONG).show();
                 }
+                break;
+            case R.id.action_otro_signo_zodiaco:
+                Intent intent_nuevo_signo = new Intent(this, ZodiacoActivity.class);
+                // Borramos el dato para que el usuario pueda seleccionar otro signo.
+                SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(OraculoZodiacoActivity.this);
+                SharedPreferences.Editor editor = user_prefs.edit();
+                editor.putString("signo-user-zodiaco", "");
+                editor.commit();
+                this.startActivity(intent_nuevo_signo);
                 break;
         }
         return super.onOptionsItemSelected(item);

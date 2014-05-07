@@ -44,8 +44,6 @@ public class MainActivity extends Activity {
             }
         });
         /**
-         *
-         */
         final Intent intent_camara = new Intent(this, CamaraActivity.class);
         Button btn_open_cam = (Button) findViewById(R.id.btn_cam_activity);
         btn_open_cam.setOnClickListener( new View.OnClickListener() {
@@ -54,5 +52,6 @@ public class MainActivity extends Activity {
                 MainActivity.this.startActivity(intent_camara);
             }
         });
+        */
     }
 }

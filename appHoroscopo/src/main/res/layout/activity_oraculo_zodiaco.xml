@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="la.funka.apphoroscopo.OraculoZodiacoActivity"
-    android:background="#FEEAC5">
+    tools:context="la.funka.apphoroscopo.OraculoZodiacoActivity">
 
     <ImageView
         android:id="@+id/img_signo_zodiaco"
@@ -26,7 +25,8 @@
         android:ellipsize="marquee"
         android:singleLine="true"
         android:layout_marginTop="20dp"
-        android:textColor="#34495e" />
+        android:textColor="#09455C" />
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -39,20 +39,18 @@
 
         <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/scrollView">
+            android:layout_height="fill_parent">
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=""
-                android:textColor="#34495e"
-                android:textAlignment="center"
-                android:id="@+id/text_prediccion_zodiaco"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:textColor="#09455C"
+            android:textAlignment="center"
+            android:id="@+id/text_prediccion_zodiaco"/>
 
         </ScrollView>
-
 
     </LinearLayout>
 

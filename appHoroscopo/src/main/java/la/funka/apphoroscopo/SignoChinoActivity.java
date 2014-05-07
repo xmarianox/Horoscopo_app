@@ -2,7 +2,9 @@ package la.funka.apphoroscopo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -102,6 +104,15 @@ public class SignoChinoActivity extends Activity {
                 } catch (Exception e) {
                     Toast.makeText(this, "No se pudo compartir.", Toast.LENGTH_LONG).show();
                 }
+                break;
+            case R.id.action_otro_signo:
+                Intent intent_nuevo_signo = new Intent(this, ChinoActivity.class);
+                // Borramos el dato para que el usuario pueda seleccionar otro signo.
+                SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(SignoChinoActivity.this);
+                SharedPreferences.Editor editor = user_prefs.edit();
+                editor.putString("signo-user-chino","");
+                editor.commit();
+                this.startActivity(intent_nuevo_signo);
                 break;
         }
 

@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="la.funka.apphoroscopo" >
 
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="14" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        android:theme="@style/Theme.TranslucentActionBar" >
         <activity
             android:name="la.funka.apphoroscopo.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,23 +22,31 @@
         </activity>
         <activity
             android:name="la.funka.apphoroscopo.ChinoActivity"
-            android:label="@string/title_activity_chino">
+            android:label="@string/title_activity_chino" >
         </activity>
         <activity
             android:name="la.funka.apphoroscopo.ZodiacoActivity"
-            android:label="@string/title_activity_zodiaco">
+            android:label="@string/title_activity_zodiaco" >
         </activity>
         <activity
             android:name="la.funka.apphoroscopo.CamaraActivity"
-            android:label="@string/title_activity_camara">
+            android:label="@string/title_activity_camara" >
         </activity>
         <activity
             android:name="la.funka.apphoroscopo.SignoChinoActivity"
-            android:label="@string/title_activity_signo_chino">
+            android:label="@string/title_activity_signo_chino" >
         </activity>
         <activity
             android:name="la.funka.apphoroscopo.OraculoZodiacoActivity"
-            android:label="@string/title_activity_oraculo_zodiaco">
+            android:label="@string/title_activity_oraculo_zodiaco" >
+        </activity>
+        <activity
+            android:name="la.funka.apphoroscopo.ListaChinoActivity"
+            android:label="@string/title_activity_lista_chino" >
+        </activity>
+        <activity
+            android:name="la.funka.apphoroscopo.ListaZodiacoActivity"
+            android:label="@string/title_activity_lista_zodiaco" >
         </activity>
     </application>
 

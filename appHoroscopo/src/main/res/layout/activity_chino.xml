@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="la.funka.apphoroscopo.ChinoActivity"
-    android:background="#FEEAC5">
+    tools:context="la.funka.apphoroscopo.ChinoActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,7 +23,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:textSize="30sp"
-            android:textColor="#34495e"/>
+            android:textStyle="bold"
+            android:textColor="#527E7C"/>
 
         <EditText
             android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
             android:id="@+id/input_anio_chino"
             android:layout_gravity="center"
             android:hint="@string/texto_ayuda_chino"
-            android:textColor="#34495e"/>
+            android:textColor="#527E7C"/>
 
         <Button
             android:layout_width="fill_parent"
@@ -42,7 +42,8 @@
             android:text="@string/texto_btn_calcular"
             android:id="@+id/btn_calcular_chino"
             android:layout_gravity="center"
-            android:textColor="#34495e"/>
+            android:background="@drawable/button"
+            style="@style/buttonStyle" />
 
     </LinearLayout>
 

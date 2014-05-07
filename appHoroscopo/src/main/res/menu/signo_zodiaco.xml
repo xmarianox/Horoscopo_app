@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="la.funka.apphoroscopo.OraculoZodiacoActivity" >
+
+    <item android:id="@+id/action_amor_zodiaco"
+          android:title="@string/action_amor"
+          android:orderInCategory="100"
+          android:showAsAction="always" />
+
+    <item android:id="@+id/action_salud_zodiaco"
+          android:title="@string/action_salud"
+          android:orderInCategory="200"
+          android:showAsAction="always" />
+
+    <item android:id="@+id/action_dinero_zodiaco"
+          android:title="@string/action_dinero"
+          android:orderInCategory="300"
+          android:showAsAction="always" />
+
+    <item android:id="@+id/action_enviar_sms_zodiaco"
+          android:title="@string/action_enviar_sms"
+          android:orderInCategory="400"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_enviar_email_zodiaco"
+          android:title="@string/action_enviar_email"
+          android:orderInCategory="500"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_compartir_zodiaco"
+          android:title="@string/action_compartir"
+          android:orderInCategory="600"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/action_otro_signo_zodiaco"
+          android:title="@string/action_otro_signo"
+          android:orderInCategory="700"
+          android:showAsAction="never" />
+
+</menu>

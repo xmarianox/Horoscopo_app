@@ -7,6 +7,7 @@
     <string name="action_camara">Camara</string>
     <string name="action_ver">Ver</string>
     <string name="action_ayuda">Ayuda</string>
+    <string name="action_ver_todos">Ver todos los signos</string>
     <!-- Textos Chino -->
     <string name="text_chino">Horóscopo Chino</string>
     <string name="title_chino">Horóscopo Chino</string>
@@ -25,6 +26,7 @@
     <string name="action_enviar_sms">Enviar por SMS</string>
     <string name="action_enviar_email">Enviar por email</string>
     <string name="action_compartir">Compartir</string>
+    <string name="action_otro_signo">Elegir otro signo</string>
     <string name="image_description_chino">Imagen de tu signo en el horóscopo Chino.</string>
     <string name="text_prediccion_amor_rata">En el amor, habrá grandes pasiones, aunque no estará garantizada la continuidad. Para los negocios, será indispensable mantener la mente fría y tomar recaudos.</string>
     <string name="text_prediccion_salud_rata">Salud y bienestar: Las caminatas, una buena alimentación, la relajación, asegurarán el bienestar.</string>
@@ -73,6 +75,7 @@
     <string name="image_description_zodiaco">Imagen de tu signo del Zodíaco</string>
     <string name="title_activity_oraculo_zodiaco">Oraculo</string>
     <string name="action_settings">Settings</string>
+
     <!-- Predicciones -->
     <string name="aries_amor">2014 será un buen año para los Aries desde el punto de vista sentimental. Los nacidos entre el 22 de marzo y el 21 de abril estarán cargados de sensualidad durante los próximos meses. No hay que desperdiciarlo, porque puede suponer la llegada de compromisos amorosos e inclusos embarazos.
     A partir del segundo trimestre la energía que invade a los Aries abarcará también su sensualidad, que alcanzará su punto álgido durante la temporada estival. Es una buena época para dar rienda suelta a sus instintos y disfrutar con plenitud de su sensualidad.
@@ -115,8 +118,7 @@
     Por otro lado, el horóscopo dice que si eres un Leo soltero este va a ser tu año, puesto que no debes reconciliarte o poner reglas con tu actual pareja puedes intentar encontrar la que mejor se adapte a ti. No obstante, no deberás hacer un esfuerzo extraordinario, ya que esa persona te ha estado esperando todo este tiempo. No voluntariamente, por supuesto, ya que no será un amigo o una amiga de toda la vida, sino alguien que ha pasado por la misma situación dolorosa que tú y encontrará en ti su media naranja.
     Sé paciente, esa persona llegará a ti en 2014 del modo más inesperado, pero por suerte para los dos no será una pasión pasajera, sino una relación para toda la vida.
     No intentes imaginártelo, es un amor de lo más inusual. Algo que no habrás previsto antes y que, aunque como buen leo no te lo creas, podrá dejarte con la boca abierta a ti también.</string>
-    <string name="leo_salud">
-    El horóscopo sabe que como aprenderás a manejar correctamente tu provecho económico, decidirás incrementar tus ahorros dejando antiguos vicios innecesarios y no beneficiosos para tu salud, como dejando de fumar, de beber socialmente en exceso o de comprarte ropa la cual ya no necesitas. El dinero que ahorres lo invertirás en actividades más saludables como apuntarte a un gimnasio o comprarte algún capricho ocasionalmente y no como excusa para curar tu infelicidad o avaricia, lo cual te hará más feliz.
+    <string name="leo_salud">    El horóscopo sabe que como aprenderás a manejar correctamente tu provecho económico, decidirás incrementar tus ahorros dejando antiguos vicios innecesarios y no beneficiosos para tu salud, como dejando de fumar, de beber socialmente en exceso o de comprarte ropa la cual ya no necesitas. El dinero que ahorres lo invertirás en actividades más saludables como apuntarte a un gimnasio o comprarte algún capricho ocasionalmente y no como excusa para curar tu infelicidad o avaricia, lo cual te hará más feliz.
     En cuanto a salud física no sufrirás ninguna dolencia importante durante el 2014. Pequeños problemas no fuera de lo corriente pueden ocurrirte, como catarros o alergias, pero nada de gravedad. En cuanto a tu salud psicológica, 2014 es el año en el que tendrás menos problemas. Durante el año anterior tuviste grandes preocupaciones y mucha ansiedad. No obstante, en este nuevo año tus dudas se disolverán y empezarás a tomar las opciones adecuadas para dejar de sufrir.
     Te vas a centrar en ti y en lo que te hace feliz. No solo lo notarás psicológicamente sino también físicamente, ya que todas esas dolencias que sufrías a causa del estrés desaparecerán y te permitirán gozar de tu salud durante todo el año.
     El desarrollar tu creatividad y dar lo mejor de ti mismo laboralmente te ayudará a sentirte descansado. No estarás frustrado ni tendrás la sensación de estar malgastando el tiempo. Los lunes no serán el peor día de la semana porque disfrutarás el momento, tanto en casa como en el trabajo y eso te ayudará a sentirte feliz y descansado.
@@ -214,6 +216,8 @@
     Si estás buscando trabajo, a principios de 2014 encontrarás a una persona que te ofrecerá una oferta laboral muy generosa. Déjate llevar y confía en ella, porque su energía es limpia y positiva. Si estás receptivo y aceptas las ayudas de los demás verás como 2014 se convierte en un año muy fructífero para ti.
     Piscis, en cuanto a dinero debes saber que tu horóscopo muestra que durante 2014 tu situación económica no dará grandes cambios con respecto al pasado año, pero es posible que recibas un extra que te ayudará a vivir con esos caprichos que no quieres dejar de lado y temes perder. Si estás abierto a nuevas ideas y sabes aprovechar los golpes de suerte que te dará el nuevo año podrás disfrutar de esos caprichos y alguno más.
     En la segunda mitad del 2014 recibirás un regalo de alguien que no esperas y que cambiará tu vida de alguna manera, pero debes ser agradecido si no quieres perder esta buena oportunidad que te regala la vida.</string>
-
+    <string name="title_activity_lista_chino">ListaChinoActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_lista_zodiaco">ListaZodiacoActivity</string>
 
 </resources>

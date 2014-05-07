@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="la.funka.apphoroscopo.ZodiacoActivity" >
+
+    <item android:id="@+id/action_lista_zodiaco"
+          android:title="@string/action_ver_todos"
+          android:orderInCategory="100"
+          android:showAsAction="always" />
+</menu>

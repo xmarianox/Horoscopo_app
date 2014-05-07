@@ -32,4 +32,9 @@
           android:orderInCategory="600"
           android:showAsAction="never" />
 
+    <item android:id="@+id/action_otro_signo"
+          android:title="@string/action_otro_signo"
+          android:orderInCategory="700"
+          android:showAsAction="never" />
+
 </menu>

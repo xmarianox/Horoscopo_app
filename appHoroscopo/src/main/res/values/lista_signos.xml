@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="signos_zodiaco_list">
+        <item>Aries</item>
+        <item>Tauro</item>
+        <item>Géminis</item>
+        <item>Cáncer</item>
+        <item>Leo</item>
+        <item>Virgo</item>
+        <item>Libra</item>
+        <item>Escorpio</item>
+        <item>Sagitario</item>
+        <item>Capricornio</item>
+        <item>Acuario</item>
+        <item>Piscis</item>
+    </string-array>
+
+    <string-array name="signos_chinos_list">
+        <item>Rata</item>
+        <item>Buey</item>
+        <item>Tigre</item>
+        <item>Conejo</item>
+        <item>Dragon</item>
+        <item>Serpiente</item>
+        <item>Caballo</item>
+        <item>Cabra</item>
+        <item>Mono</item>
+        <item>Gallo</item>
+        <item>Perro</item>
+        <item>Cerdo</item>
+    </string-array>
+
+</resources>

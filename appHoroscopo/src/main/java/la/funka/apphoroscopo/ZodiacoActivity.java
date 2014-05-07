@@ -2,11 +2,14 @@ package la.funka.apphoroscopo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 
 public class ZodiacoActivity extends Activity {
 
@@ -20,6 +23,18 @@ public class ZodiacoActivity extends Activity {
         signoZodiaco = new SignoZodiaco();
 
         final Intent intent_oraculo = new Intent(this, OraculoZodiacoActivity.class);
+        SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String signo_guardado = "";
+        signo_guardado = user_prefs.getString("signo-user-zodiaco","");
+
+        if (!signo_guardado.equals("")) {
+            signoZodiaco = new SignoZodiaco(signo_guardado);
+            String nombre_signo = signoZodiaco.getNombreSigno().toString();
+            intent_oraculo.putExtra("signo", nombre_signo);
+            startActivity(intent_oraculo);
+            finish();
+        }
 
         Button btn_calcuclar = (Button) findViewById(R.id.btn_calcular_zodiaco);
         btn_calcuclar.setOnClickListener( new View.OnClickListener() {
@@ -44,11 +59,33 @@ public class ZodiacoActivity extends Activity {
                 // Pasamos el dato del signo actual al otro activity
                 intent_oraculo.putExtra("signo", signo);
 
+                // Guardamos el signo del usuario de manera persistente.
+                SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(ZodiacoActivity.this);
+                SharedPreferences.Editor editor = user_prefs.edit();
+                editor.putString("signo-user-zodiaco", signo);
+                editor.commit();
+
                 // Abrimos el nuevo activity
                 startActivity(intent_oraculo);
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.lista_de_signos_zodiaco, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_lista_zodiaco) {
+            Intent lista_intent_zodiaco = new Intent(this, ListaZodiacoActivity.class);
+            this.startActivity(lista_intent_zodiaco);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
