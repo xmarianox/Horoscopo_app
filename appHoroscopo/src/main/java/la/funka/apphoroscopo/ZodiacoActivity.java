@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ZodiacoActivity extends Activity {
 
@@ -49,24 +50,33 @@ public class ZodiacoActivity extends Activity {
                 String dia_ingresado = dia_nac.getText().toString().trim();
                 String mes_ingresado = mes_nac.getText().toString().trim();
 
-                // Convertimos a enteros los valores ingresados.
-                int dia = Integer.parseInt(dia_ingresado);
-                int mes = Integer.parseInt(mes_ingresado);
+                if (!dia_ingresado.equals("")) {
+                    if (!mes_ingresado.equals("")) {
 
-                // El metodo dame_signo_zodiaco devuelve el signo del usuario.
-                String signo = signoZodiaco.dameSigno(dia, mes);
+                        // Convertimos a enteros los valores ingresados.
+                        int dia = Integer.parseInt(dia_ingresado);
+                        int mes = Integer.parseInt(mes_ingresado);
 
-                // Pasamos el dato del signo actual al otro activity
-                intent_oraculo.putExtra("signo", signo);
+                        // El metodo dame_signo_zodiaco devuelve el signo del usuario.
+                        String signo = signoZodiaco.dameSigno(dia, mes);
 
-                // Guardamos el signo del usuario de manera persistente.
-                SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(ZodiacoActivity.this);
-                SharedPreferences.Editor editor = user_prefs.edit();
-                editor.putString("signo-user-zodiaco", signo);
-                editor.commit();
+                        // Pasamos el dato del signo actual al otro activity
+                        intent_oraculo.putExtra("signo", signo);
 
-                // Abrimos el nuevo activity
-                startActivity(intent_oraculo);
+                        // Guardamos el signo del usuario de manera persistente.
+                        SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(ZodiacoActivity.this);
+                        SharedPreferences.Editor editor = user_prefs.edit();
+                        editor.putString("signo-user-zodiaco", signo);
+                        editor.commit();
+
+                        // Abrimos el nuevo activity
+                        startActivity(intent_oraculo);
+                    }
+                    Toast.makeText(ZodiacoActivity.this, "Debes completar los campos para continuar...", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ZodiacoActivity.this, "Debes completar los campos para continuar...", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

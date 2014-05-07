@@ -5,6 +5,8 @@
     <uses-sdk
         android:maxSdkVersion="19"
         android:minSdkVersion="14" />
+    
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -47,6 +49,10 @@
         <activity
             android:name="la.funka.apphoroscopo.ListaZodiacoActivity"
             android:label="@string/title_activity_lista_zodiaco" >
+        </activity>
+        <activity
+            android:name="la.funka.apphoroscopo.HistoriaActivity"
+            android:label="@string/title_activity_historia" >
         </activity>
     </application>
 

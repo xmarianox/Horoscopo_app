@@ -43,6 +43,17 @@ public class MainActivity extends Activity {
                 MainActivity.this.startActivity(intent_zodiaco);
             }
         });
+
+        final Intent intent_historia = new Intent(this, HistoriaActivity.class);
+
+        Button btn_historia = (Button) findViewById(R.id.btn_historia);
+        btn_historia.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                MainActivity.this.startActivity(intent_historia);
+            }
+        });
+
         /**
         final Intent intent_camara = new Intent(this, CamaraActivity.class);
         Button btn_open_cam = (Button) findViewById(R.id.btn_cam_activity);

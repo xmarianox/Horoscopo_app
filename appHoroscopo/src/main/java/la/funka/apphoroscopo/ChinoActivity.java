@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class ChinoActivity extends Activity {
@@ -50,21 +51,28 @@ public class ChinoActivity extends Activity {
                 // Traemos el año que ingreso el usuario para calcular el signo.
                 EditText input_anio = (EditText) findViewById(R.id.input_anio_chino);
                 String anio_ingresado = input_anio.getText().toString().trim();
-                int anio = Integer.parseInt(anio_ingresado);
 
-                String signo = signoChino.dameSigno(anio);
+                if (!anio_ingresado.equals("")) {
 
-                // Pasamos el signo al proximo activity.
-                intent_signo.putExtra("Signo", signo);
+                    int anio = Integer.parseInt(anio_ingresado);
 
-                // Guardamos el signo del usuario de manera persistente.
-                SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(ChinoActivity.this);
-                SharedPreferences.Editor editor = user_prefs.edit();
-                editor.putString("signo-user-chino", signo);
-                editor.commit();
+                    String signo = signoChino.dameSigno(anio);
 
-                //Abrimos un nuevo activity.
-                startActivity(intent_signo);
+                    // Pasamos el signo al proximo activity.
+                    intent_signo.putExtra("Signo", signo);
+
+                    // Guardamos el signo del usuario de manera persistente.
+                    SharedPreferences user_prefs = PreferenceManager.getDefaultSharedPreferences(ChinoActivity.this);
+                    SharedPreferences.Editor editor = user_prefs.edit();
+                    editor.putString("signo-user-chino", signo);
+                    editor.commit();
+
+                    //Abrimos un nuevo activity.
+                    startActivity(intent_signo);
+
+                }
+
+                Toast.makeText(ChinoActivity.this, "Debes completar el campo para continuar...", Toast.LENGTH_SHORT).show();
 
                 /**
                 if ( anio > anio_actual || anio > (anio_actual - 100) ) {

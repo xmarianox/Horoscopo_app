@@ -75,6 +75,8 @@
     <string name="image_description_zodiaco">Imagen de tu signo del Zodíaco</string>
     <string name="title_activity_oraculo_zodiaco">Oraculo</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_historia">Historia</string>
+    <string name="btn_traer_historia">Traer Historia</string>
 
     <!-- Predicciones -->
     <string name="aries_amor">2014 será un buen año para los Aries desde el punto de vista sentimental. Los nacidos entre el 22 de marzo y el 21 de abril estarán cargados de sensualidad durante los próximos meses. No hay que desperdiciarlo, porque puede suponer la llegada de compromisos amorosos e inclusos embarazos.
@@ -216,8 +218,10 @@
     Si estás buscando trabajo, a principios de 2014 encontrarás a una persona que te ofrecerá una oferta laboral muy generosa. Déjate llevar y confía en ella, porque su energía es limpia y positiva. Si estás receptivo y aceptas las ayudas de los demás verás como 2014 se convierte en un año muy fructífero para ti.
     Piscis, en cuanto a dinero debes saber que tu horóscopo muestra que durante 2014 tu situación económica no dará grandes cambios con respecto al pasado año, pero es posible que recibas un extra que te ayudará a vivir con esos caprichos que no quieres dejar de lado y temes perder. Si estás abierto a nuevas ideas y sabes aprovechar los golpes de suerte que te dará el nuevo año podrás disfrutar de esos caprichos y alguno más.
     En la segunda mitad del 2014 recibirás un regalo de alguien que no esperas y que cambiará tu vida de alguna manera, pero debes ser agradecido si no quieres perder esta buena oportunidad que te regala la vida.</string>
+
     <string name="title_activity_lista_chino">ListaChinoActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_lista_zodiaco">ListaZodiacoActivity</string>
+    <string name="title_activity_historia">HistoriaActivity</string>
 
 </resources>
